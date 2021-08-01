@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Rahmat Saputra</title>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="assets/stylesheet/styles.css">
+</head>
+
+<body>
+   <header class="head_bar">
+      <h1 class="head_bar__title">Bookshelf Apps By Rahmat Saputra</h1>
+   </header>
+   <main>
+      <section class="input_section">
+         <h2>Masukkan Buku Baru</h2>
+         <form id="inputBook">
+            <div class="input" id="titleWrapper">
+               <label for="inputBookTitle">Judul</label>
+               <input id="inputBookTitle" type="text" required>
+            </div>
+            <div class="input" id="authorWrapper">
+               <label for="inputBookAuthor">Penulis</label>
+               <input id="inputBookAuthor" type="text" required>
+            </div>
+            <div class="input" id="yearWrapper">
+               <label for="inputBookYear">Tahun</label>
+               <input id="inputBookYear" type="number" required>
+            </div>
+            <div class="input_inline">
+               <label for="inputBookIsComplete">Selesai dibaca</label>
+               <input id="inputBookIsComplete" type="checkbox">
+            </div>
+            <button id="bookSubmit" type="submit">
+               Masukkan Buku ke rak <span id="titleIsUnread">Belum selesai dibaca</span>
+            </button>
+         </form>
+      </section>
+
+      <section class="search_section">
+         <h2>Cari Buku (Opsional)</h2>
+         <form id="searchBook">
+            <label for="searchBookTitle">Pencarian</label>
+            <input id="searchBookValue" type="text" placeholder="Kata kunci Judul, Penulis atau tahun">
+            <button id="searchSubmit" type="submit">Cari</button>
+         </form>
+         <div id="searchResult" class="book_list" style="width: 100%"></div>
+      </section>
+
+      <article class="book_shelf_wrapper">
+         <section class="book_shelf">
+            <h2>Rak Belum selesai dibaca</h2>
+
+            <div id="notFinishedReadingList" class="book_list"></div>
+         </section>
+
+         <section class="book_shelf">
+            <h2>Rak Selesai dibaca</h2>
+
+            <div id="finishedReadingList" class="book_list"></div>
+         </section>
+      </article>
+
+   </main>
+
+   <script type="text/javascript" src="assets/javascript/action.js"></script>
+   <script type="text/javascript" src="assets/javascript/helper.js"></script>
+   <script type="text/javascript" src="assets/javascript/initial.js"></script>
+   <script type="text/javascript" src="assets/javascript/event.js"></script>
+</body>
+
+</html>
